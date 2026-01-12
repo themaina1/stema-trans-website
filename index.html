@@ -25,7 +25,6 @@ form button { background:#25D366; color:white; font-weight:bold; cursor:pointer;
 form button:hover { background:#1ebe5b; }
 footer { background:#05070d; padding:20px; text-align:center; font-size:14px; opacity:0.7; }
 .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.4); z-index:100; }
-.watermark { position:fixed; bottom:5px; left:10px; font-size:12px; opacity:0.25; }
 </style>
 </head>
 <body>
@@ -33,15 +32,16 @@ footer { background:#05070d; padding:20px; text-align:center; font-size:14px; op
 <header>
   <img src="images/stema-logo.png" alt="Stema Trans Logo">
   <h1>Stema Trans City Tour</h1>
-  <p>Explore Nairobi's iconic landmarks with our expert guide</p>
+  <p>Discover Nairobi's wonders with our professional city tour guide</p>
 </header>
 
 <section>
   <h2>About the City Tour</h2>
   <p style="text-align:center; max-width:800px; margin:auto;">
-    Join Stema Trans for an exciting Nairobi city tour guided by our experienced professional. 
-    Experience the history, culture, and natural beauty of Nairobi. Entry fees, lunch, and personal expenses are <strong>paid by the tourist</strong>. 
-    Perfect for tourists, students, and anyone curious about the rich heritage of Nairobi.
+    Stema Trans offers an immersive Nairobi city tour guided by experienced professionals. 
+    Experience Nairobi’s culture, history, and natural beauty in a personalized tour. 
+    All entry fees, lunches, and personal expenses are <strong>paid by the tourist</strong>. 
+    This tour is perfect for anyone wanting to explore Nairobi’s iconic landmarks.
   </p>
 </section>
 
@@ -50,42 +50,42 @@ footer { background:#05070d; padding:20px; text-align:center; font-size:14px; op
   <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
 
     <div class="tour-card" onclick="toggleDetails('tour1')">
-      <h3>4-Hour Tour</h3>
+      <h3>4-Hour City Tour</h3>
       <div class="tour-details" id="tour1">
         <p><strong>Price:</strong> KES 5,000 / USD 40 per person</p>
         <p><strong>Duration:</strong> 4 hours</p>
         <p><strong>Places:</strong> Nairobi National Museum, Karura Forest</p>
-        <p><strong>Note:</strong> Entry fees and lunch paid by tourist</p>
+        <p><strong>Note:</strong> Entry fees, lunch paid by tourist</p>
       </div>
     </div>
 
     <div class="tour-card" onclick="toggleDetails('tour2')">
-      <h3>6-Hour Tour</h3>
+      <h3>6-Hour City Tour</h3>
       <div class="tour-details" id="tour2">
         <p><strong>Price:</strong> KES 7,000 / USD 55 per person</p>
         <p><strong>Duration:</strong> 6 hours</p>
         <p><strong>Places:</strong> Nairobi National Museum, Karura Forest, Giraffe Centre</p>
-        <p><strong>Note:</strong> Entry fees and lunch paid by tourist</p>
+        <p><strong>Note:</strong> Entry fees, lunch paid by tourist</p>
       </div>
     </div>
 
     <div class="tour-card" onclick="toggleDetails('tour3')">
-      <h3>Full-Day Tour (8 Hours)</h3>
+      <h3>Full-Day City Tour (8 Hours)</h3>
       <div class="tour-details" id="tour3">
         <p><strong>Price:</strong> KES 10,000 / USD 80 per person</p>
         <p><strong>Duration:</strong> 8 hours</p>
         <p><strong>Places:</strong> Nairobi National Museum, Karura Forest, Giraffe Centre, Masai Market</p>
-        <p><strong>Note:</strong> Entry fees, lunch, and personal expenses paid by tourist</p>
+        <p><strong>Note:</strong> Entry fees, lunch, shopping paid by tourist</p>
       </div>
     </div>
 
     <div class="tour-card" onclick="toggleDetails('tour4')">
-      <h3>Sunset Tour</h3>
+      <h3>Sunset City Tour</h3>
       <div class="tour-details" id="tour4">
         <p><strong>Price:</strong> KES 4,000 / USD 32 per person</p>
         <p><strong>Duration:</strong> 3-4 hours</p>
         <p><strong>Places:</strong> Nairobi National Park, Sunset Point</p>
-        <p><strong>Note:</strong> Entry fees and personal expenses paid by tourist</p>
+        <p><strong>Note:</strong> Entry fees, refreshments paid by tourist</p>
       </div>
     </div>
 
@@ -99,49 +99,39 @@ footer { background:#05070d; padding:20px; text-align:center; font-size:14px; op
     <div class="place-card">
       <img src="images/nairobi-national-museum.jpg" alt="Nairobi National Museum">
       <h3>Nairobi National Museum</h3>
-      <p>Step into Kenya’s rich history and culture. Admire ancient fossils, traditional crafts, and contemporary art. Expect a journey through time that excites both adults and children. <strong>Entry fee paid by tourist.</strong></p>
+      <p>Step into Kenya’s rich history and culture. Admire fossils, traditional art, and modern exhibits. Expect a journey that excites both adults and children. <strong>Entry fee paid by tourist.</strong></p>
     </div>
 
     <div class="place-card">
       <img src="images/karura-forest.jpg" alt="Karura Forest">
       <h3>Karura Forest</h3>
-      <p>Walk or bike along serene trails, see cascading waterfalls, and spot exotic birds. Perfect for nature lovers and photographers seeking calm urban beauty. <strong>No entry fee; lunch optional.</strong></p>
+      <p>Walk along serene trails, see waterfalls, and spot exotic birds. Ideal for nature lovers and photographers seeking calm urban beauty. <strong>No entry fee; lunch optional.</strong></p>
     </div>
 
     <div class="place-card">
       <img src="images/giraffe-center.jpg" alt="Giraffe Centre">
       <h3>Giraffe Centre</h3>
-      <p>Meet endangered Rothschild giraffes up close and feed them from your hands. Learn about conservation efforts while taking unforgettable photos. <strong>Entry and feeding fees paid by tourist.</strong></p>
+      <p>Get close to endangered Rothschild giraffes and feed them by hand. Learn conservation stories while capturing unforgettable photos. <strong>Entry and feeding fees paid by tourist.</strong></p>
     </div>
 
     <div class="place-card">
       <img src="images/masai-market.jpg" alt="Masai Market">
       <h3>Masai Market</h3>
-      <p>Experience vibrant Kenyan culture. Shop for handmade jewelry, crafts, and souvenirs. Haggling is part of the fun! <strong>Shopping paid by tourist.</strong></p>
+      <p>Explore vibrant stalls of handcrafted jewelry, souvenirs, and art. Haggling adds to the adventure! <strong>Shopping paid by tourist.</strong></p>
     </div>
 
     <div class="place-card">
       <img src="images/nairobi-national-park.jpg" alt="Nairobi National Park">
       <h3>Nairobi National Park</h3>
-      <p>See lions, giraffes, and rhinos against a city skyline backdrop. A unique safari experience without leaving Nairobi. <strong>Park entry paid by tourist.</strong></p>
+      <p>See lions, giraffes, and rhinos with Nairobi’s skyline in the background. A unique safari without leaving the city. <strong>Park entry paid by tourist.</strong></p>
     </div>
 
     <div class="place-card">
       <img src="images/sunset-point.jpg" alt="Sunset Point">
       <h3>Sunset Point</h3>
-      <p>Capture Nairobi’s skyline in golden hour light. Ideal for photos and relaxing. <strong>No fee; refreshments optional and paid by tourist.</strong></p>
+      <p>Relax and capture breathtaking city views at golden hour. Ideal for photos and reflection. <strong>Refreshments optional and paid by tourist.</strong></p>
     </div>
 
-  </div>
-</section>
-
-<section>
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="images/city1.jpg" alt="City View 1">
-    <img src="images/city2.jpg" alt="City View 2">
-    <img src="images/city3.jpg" alt="City View 3">
-    <img src="images/city4.jpg" alt="City View 4">
   </div>
 </section>
 
@@ -160,13 +150,6 @@ footer { background:#05070d; padding:20px; text-align:center; font-size:14px; op
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
-</section>
-
-<section>
-  <h2>Our Location</h2>
-  <div style="text-align:center; max-width:800px; margin:auto;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.123456!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117d0a0f0e01%3A0x123456789abcdef!2sNairobi%2C+Kenya!5e0!3m2!1sen!2sus!4v1670000000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
 </section>
 
 <footer>
