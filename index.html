@@ -8,19 +8,22 @@
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#0b0f19; color:#fff; line-height:1.6; }
 header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); padding:80px 20px; text-align:center; }
-header img { display:block; margin:auto; margin-bottom:20px; width:180px; }
+header img { display:block; margin:auto; margin-bottom:20px; width:180px; border-radius:8px; }
 header h1 { font-size:48px; margin-bottom:10px; }
 header p { font-size:18px; opacity:0.9; }
 section { padding:60px 20px; max-width:1100px; margin:auto; }
 h2 { text-align:center; margin-bottom:30px; font-size:32px; }
 .services, .contact, .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:#12182b; padding:25px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); }
+.card { background:#12182b; padding:25px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
 footer { background:#05070d; padding:20px; text-align:center; font-size:14px; opacity:0.7; }
-.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.4); }
+.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.4); z-index:100; }
 .watermark { position:fixed; bottom:5px; left:10px; font-size:12px; opacity:0.25; }
-.gallery img { width:100%; border-radius:10px; }
+.gallery img { width:100%; border-radius:10px; transition: transform 0.3s; }
+.gallery img:hover { transform: scale(1.05); }
 form input, form textarea, form button { width:100%; padding:10px; margin:5px 0; border-radius:5px; border:none; }
-form button { background:#25D366; color:white; font-weight:bold; cursor:pointer; }
+form button { background:#25D366; color:white; font-weight:bold; cursor:pointer; transition: background 0.3s; }
+form button:hover { background:#1ebe5b; }
 </style>
 
 </head>
