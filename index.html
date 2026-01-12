@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stema Trans | Nairobi City Tour</title>
-
 <style>
 body { margin:0; font-family:Arial,sans-serif; background:#0b0f19; color:#fff; line-height:1.6; }
 header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); padding:80px 20px; text-align:center; }
@@ -14,19 +13,21 @@ header p { font-size:18px; opacity:0.9; }
 section { padding:60px 20px; max-width:1100px; margin:auto; }
 h2 { text-align:center; margin-bottom:30px; font-size:32px; }
 h3 { margin-bottom:15px; }
-.prices, .tour-places, .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card, .price-card, .place-card { background:#12182b; padding:25px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s; }
-.card:hover, .price-card:hover, .place-card:hover { transform: translateY(-5px); }
-footer { background:#05070d; padding:20px; text-align:center; font-size:14px; opacity:0.7; }
-.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.4); z-index:100; }
-.watermark { position:fixed; bottom:5px; left:10px; font-size:12px; opacity:0.25; }
+.tour-card { background:#12182b; padding:20px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); cursor:pointer; transition: transform 0.3s; }
+.tour-card:hover { transform: translateY(-5px); }
+.tour-details { display:none; background:#1a2233; padding:15px; border-radius:10px; margin-top:10px; }
+.tour-places, .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.place-card { background:#12182b; padding:25px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s; }
+.place-card:hover { transform: translateY(-5px); }
 .gallery img, .tour-places img { width:100%; border-radius:10px; transition: transform 0.3s; }
 .gallery img:hover, .tour-places img:hover { transform: scale(1.05); }
 form input, form textarea, form button { width:100%; padding:10px; margin:5px 0; border-radius:5px; border:none; }
 form button { background:#25D366; color:white; font-weight:bold; cursor:pointer; transition: background 0.3s; }
 form button:hover { background:#1ebe5b; }
+footer { background:#05070d; padding:20px; text-align:center; font-size:14px; opacity:0.7; }
+.whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.4); z-index:100; }
+.watermark { position:fixed; bottom:5px; left:10px; font-size:12px; opacity:0.25; }
 </style>
-
 </head>
 <body>
 
@@ -37,48 +38,75 @@ form button:hover { background:#1ebe5b; }
 </header>
 
 <section>
-  <h2>About the City Tour</h2>
+  <h2>About the City Tour Guide</h2>
   <p style="text-align:center; max-width:800px; margin:auto;">
-    Discover the heart of Nairobi with our expertly guided City Tour. 
-    This tour takes you to Nairobi's most iconic landmarks, cultural hubs, and natural attractions. 
-    From the historic Nairobi National Museum to the lush Karura Forest and the playful giraffes at the Giraffe Centre, 
-    each stop offers an unforgettable experience. Ideal for tourists, students, and anyone eager to explore 
-    the city safely, comfortably, and with a knowledgeable guide, our City Tour ensures you see the best of Nairobi in one day.
+    Join our expert City Tour Guide for a full-day exploration of Nairobi’s iconic landmarks and hidden gems. 
+    Experience museums, parks, cultural markets, and wildlife encounters with knowledgeable guidance. 
+    Perfect for tourists and anyone curious about Nairobi’s history, culture, and nature. Safety and comfort guaranteed.
   </p>
 </section>
 
 <section>
-  <h2>Tour Packages & Prices</h2>
-  <div class="prices">
-    <div class="price-card">⏱ 4-hour tour<br><strong>KES 5,000 / USD 40</strong></div>
-    <div class="price-card">⏱ 6-hour tour<br><strong>KES 7,000 / USD 55</strong></div>
-    <div class="price-card">⏱ Full-day tour (8 hours)<br><strong>KES 10,000 / USD 80</strong></div>
-    <div class="price-card">🌅 Sunset tour<br><strong>KES 4,000 / USD 32</strong></div>
+  <h2>City Tour Packages</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+    
+    <div class="tour-card" onclick="toggleDetails('tour1')">
+      <h3>4-Hour Tour</h3>
+      <div class="tour-details" id="tour1">
+        <p><strong>Price:</strong> KES 5,000 / USD 40</p>
+        <p><strong>Areas Covered:</strong> Nairobi National Museum, Karura Forest</p>
+        <p><strong>Time:</strong> 4 hours</p>
+      </div>
+    </div>
+
+    <div class="tour-card" onclick="toggleDetails('tour2')">
+      <h3>6-Hour Tour</h3>
+      <div class="tour-details" id="tour2">
+        <p><strong>Price:</strong> KES 7,000 / USD 55</p>
+        <p><strong>Areas Covered:</strong> Nairobi National Museum, Karura Forest, Giraffe Centre</p>
+        <p><strong>Time:</strong> 6 hours</p>
+      </div>
+    </div>
+
+    <div class="tour-card" onclick="toggleDetails('tour3')">
+      <h3>Full-Day Tour (8 Hours)</h3>
+      <div class="tour-details" id="tour3">
+        <p><strong>Price:</strong> KES 10,000 / USD 80</p>
+        <p><strong>Areas Covered:</strong> Nairobi National Museum, Karura Forest, Giraffe Centre, Masai Market</p>
+        <p><strong>Time:</strong> 8 hours</p>
+      </div>
+    </div>
+
+    <div class="tour-card" onclick="toggleDetails('tour4')">
+      <h3>Sunset Tour</h3>
+      <div class="tour-details" id="tour4">
+        <p><strong>Price:</strong> KES 4,000 / USD 32</p>
+        <p><strong>Areas Covered:</strong> Nairobi National Park, Sunset Point</p>
+        <p><strong>Time:</strong> 3-4 hours</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section>
-  <h2>Places Included in the Tour</h2>
+  <h2>Places Included</h2>
   <div class="tour-places">
     <div class="place-card">
       <img src="images/nairobi-national-museum.jpg" alt="Nairobi National Museum">
       <h3>Nairobi National Museum</h3>
-      <p>Learn about Kenya's rich history, art, and culture.</p>
     </div>
     <div class="place-card">
       <img src="images/karura-forest.jpg" alt="Karura Forest">
       <h3>Karura Forest</h3>
-      <p>Enjoy walking trails, waterfalls, and lush greenery.</p>
     </div>
     <div class="place-card">
       <img src="images/giraffe-center.jpg" alt="Giraffe Centre">
       <h3>Giraffe Centre</h3>
-      <p>Get close to endangered Rothschild giraffes and feed them.</p>
     </div>
     <div class="place-card">
       <img src="images/masai-market.jpg" alt="Masai Market">
       <h3>Masai Market</h3>
-      <p>Shop local crafts, souvenirs, and experience Kenyan culture.</p>
     </div>
   </div>
 </section>
@@ -95,7 +123,7 @@ form button:hover { background:#1ebe5b; }
 
 <section>
   <h2>Contact & Booking</h2>
-  <div class="contact" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
     <div class="card">📞 Phone<br><strong>+254722910913</strong></div>
     <div class="card">📧 Email<br><strong>maina.stevens@gmail.com</strong></div>
     <div class="card">📍 Location<br>Nairobi, Kenya</div>
@@ -123,6 +151,17 @@ form button:hover { background:#1ebe5b; }
 
 <a class="whatsapp" href="https://wa.me/254722910913" target="_blank">💬 Chat on WhatsApp</a>
 <div class="watermark">STEMA TRANS</div>
+
+<script>
+function toggleDetails(id){
+  const elem = document.getElementById(id);
+  if(elem.style.display === 'block'){
+    elem.style.display = 'none';
+  } else {
+    elem.style.display = 'block';
+  }
+}
+</script>
 
 </body>
 </html>
