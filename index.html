@@ -1,74 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Stema Trans</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0b0f19;
-            color: white;
-            text-align: center;
-        }
-        header {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-        section {
-            padding: 40px 20px;
-        }
-        footer {
-            background: #05070d;
-            padding: 15px;
-            font-size: 14px;
-            opacity: 0.7;
-        }
-        .watermark {
-            position: fixed;
-            bottom: 10px;
-            right: 15px;
-            font-size: 12px;
-            opacity: 0.3;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stema Trans | Transport & Tours</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f19;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.services, .contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #12182b;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer {
+  background: #05070d;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Watermark */
+.watermark {
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+  font-size: 12px;
+  opacity: 0.25;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>STEMA TRANS</h1>
-    <p>Reliable Transport • Tours • Airport Transfers</p>
+  <h1>STEMA TRANS</h1>
+  <p>Reliable Transport • Tours • Airport Transfers</p>
 </header>
 
 <section>
-    <h2>Our Services</h2>
-    <p>
-        ✔ Airport Transfers<br>
-        ✔ City Tours<br>
-        ✔ Corporate Transport<br>
-        ✔ Private Hire
-    </p>
+  <h2>About Us</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Stema Trans is a professional transport and tour service offering reliable,
+    comfortable, and timely solutions for airport transfers, city tours,
+    corporate travel, and private hire across Kenya.
+  </p>
 </section>
 
 <section>
-    <h2>Contact Us</h2>
-    <p>
-        📞 Phone: +254 722 910 913<br>
-        📧 Email: info@stematrans.co.ke
-    </p>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">✈️ Airport Transfers</div>
+    <div class="card">🏙️ City & Nairobi Tours</div>
+    <div class="card">🏢 Corporate Transport</div>
+    <div class="card">🚗 Private Hire</div>
+  </div>
+</section>
+
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <div class="card">
+      📞 Phone<br>
+      <strong>+254 XXX XXX XXX</strong>
+    </div>
+    <div class="card">
+      📧 Email<br>
+      <strong>info@stematrans.co.ke</strong>
+    </div>
+    <div class="card">
+      📍 Location<br>
+      Nairobi, Kenya
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Stema Trans. All Rights Reserved.
+  © 2026 Stema Trans. All Rights Reserved.
 </footer>
+
+<a class="whatsapp" href="https://wa.me/254XXXXXXXXX" target="_blank">
+  💬 Chat on WhatsApp
+</a>
 
 <div class="watermark">STEMA TRANS</div>
 
