@@ -13,9 +13,9 @@ header h1 { font-size:48px; margin-bottom:10px; }
 header p { font-size:18px; opacity:0.9; }
 section { padding:60px 20px; max-width:1100px; margin:auto; }
 h2 { text-align:center; margin-bottom:30px; font-size:32px; }
-.services, .contact, .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:#12182b; padding:25px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s; }
-.card:hover { transform: translateY(-5px); }
+.services, .contact, .gallery, .prices { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card, .price-card { background:#12182b; padding:25px; border-radius:10px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s; }
+.card:hover, .price-card:hover { transform: translateY(-5px); }
 footer { background:#05070d; padding:20px; text-align:center; font-size:14px; opacity:0.7; }
 .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.4); z-index:100; }
 .watermark { position:fixed; bottom:5px; left:10px; font-size:12px; opacity:0.25; }
@@ -51,6 +51,28 @@ form button:hover { background:#1ebe5b; }
     <div class="card">🏙️ City & Nairobi Tours</div>
     <div class="card">🏢 Corporate Transport</div>
     <div class="card">🚗 Private Hire</div>
+  </div>
+</section>
+
+<section>
+  <h2>Prices</h2>
+  <div class="prices">
+    <div class="price-card">
+      🚗 Airport Transfer (within Nairobi)<br>
+      <strong>KES 2,000 / USD 16</strong>
+    </div>
+    <div class="price-card">
+      🏙️ Nairobi City Tour (4 hours)<br>
+      <strong>KES 5,000 / USD 40</strong>
+    </div>
+    <div class="price-card">
+      🏢 Corporate Transport (per day)<br>
+      <strong>KES 8,000 / USD 65</strong>
+    </div>
+    <div class="price-card">
+      🚐 Private Hire (per 100km)<br>
+      <strong>KES 3,500 / USD 28</strong>
+    </div>
   </div>
 </section>
 
